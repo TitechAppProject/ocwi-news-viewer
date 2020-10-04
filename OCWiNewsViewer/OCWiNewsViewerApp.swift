@@ -11,7 +11,7 @@ import SwiftUI
 struct OCWiNewsViewerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NewsListView()
         }
     }
 }

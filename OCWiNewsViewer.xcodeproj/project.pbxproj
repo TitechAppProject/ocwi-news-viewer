@@ -3,16 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4C30DC8F25299192003166A5 /* OCWiNewsViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC8E25299192003166A5 /* OCWiNewsViewerApp.swift */; };
-		4C30DC9125299192003166A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DC9025299192003166A5 /* ContentView.swift */; };
 		4C30DC9325299193003166A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C30DC9225299193003166A5 /* Assets.xcassets */; };
 		4C30DC9625299193003166A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C30DC9525299193003166A5 /* Preview Assets.xcassets */; };
 		4C30DCA125299193003166A5 /* OCWiNewsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCA025299193003166A5 /* OCWiNewsViewerTests.swift */; };
 		4C30DCAC25299193003166A5 /* OCWiNewsViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCAB25299193003166A5 /* OCWiNewsViewerUITests.swift */; };
+		4C30DCBE252991B6003166A5 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCBD252991B6003166A5 /* NewsListView.swift */; };
+		4C30DCC4252991CF003166A5 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCC3252991CF003166A5 /* News.swift */; };
+		4C30DCCD25299203003166A5 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCCC25299203003166A5 /* RSSParser.swift */; };
+		4C30DCD62529922C003166A5 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 4C30DCD52529922C003166A5 /* Kanna */; };
+		4C30DCDC2529925D003166A5 /* RSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCDB2529925D003166A5 /* RSS.swift */; };
+		4C30DCE5252992A1003166A5 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCE4252992A1003166A5 /* NewsViewModel.swift */; };
+		4C30DCEE252992EC003166A5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCED252992EC003166A5 /* APIClient.swift */; };
+		4C30DCF7252993E2003166A5 /* CourseNewsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DCF6252993E2003166A5 /* CourseNewsConverter.swift */; };
+		4C30DD0325299424003166A5 /* CourseNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD0225299424003166A5 /* CourseNews.swift */; };
+		4C30DD0C252994A4003166A5 /* NewsTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD0B252994A4003166A5 /* NewsTranslator.swift */; };
+		4C30DD15252994F5003166A5 /* NewsMediaLinkDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD14252994F5003166A5 /* NewsMediaLinkDetector.swift */; };
+		4C30DD1E2529953A003166A5 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD1D2529953A003166A5 /* Regexp.swift */; };
+		4C30DD2725299A99003166A5 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD2625299A99003166A5 /* NewsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +47,6 @@
 /* Begin PBXFileReference section */
 		4C30DC8B25299192003166A5 /* OCWiNewsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCWiNewsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C30DC8E25299192003166A5 /* OCWiNewsViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCWiNewsViewerApp.swift; sourceTree = "<group>"; };
-		4C30DC9025299192003166A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C30DC9225299193003166A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C30DC9525299193003166A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C30DC9725299193003166A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +56,18 @@
 		4C30DCA725299193003166A5 /* OCWiNewsViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCWiNewsViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C30DCAB25299193003166A5 /* OCWiNewsViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCWiNewsViewerUITests.swift; sourceTree = "<group>"; };
 		4C30DCAD25299193003166A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C30DCBD252991B6003166A5 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		4C30DCC3252991CF003166A5 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4C30DCCC25299203003166A5 /* RSSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
+		4C30DCDB2529925D003166A5 /* RSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSS.swift; sourceTree = "<group>"; };
+		4C30DCE4252992A1003166A5 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		4C30DCED252992EC003166A5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		4C30DCF6252993E2003166A5 /* CourseNewsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseNewsConverter.swift; sourceTree = "<group>"; };
+		4C30DD0225299424003166A5 /* CourseNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseNews.swift; sourceTree = "<group>"; };
+		4C30DD0B252994A4003166A5 /* NewsTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTranslator.swift; sourceTree = "<group>"; };
+		4C30DD14252994F5003166A5 /* NewsMediaLinkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMediaLinkDetector.swift; sourceTree = "<group>"; };
+		4C30DD1D2529953A003166A5 /* Regexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
+		4C30DD2625299A99003166A5 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C30DCD62529922C003166A5 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +120,16 @@
 			isa = PBXGroup;
 			children = (
 				4C30DC8E25299192003166A5 /* OCWiNewsViewerApp.swift */,
-				4C30DC9025299192003166A5 /* ContentView.swift */,
+				4C30DD1C25299519003166A5 /* Utility */,
+				4C30DD13252994E6003166A5 /* Detector */,
+				4C30DD0A25299493003166A5 /* Translator */,
+				4C30DD012529940F003166A5 /* DomainModel */,
+				4C30DCF5252993BE003166A5 /* Converter */,
+				4C30DCEC252992E4003166A5 /* APIClient */,
+				4C30DCE32529928F003166A5 /* ViewModel */,
+				4C30DCBC252991A6003166A5 /* View */,
+				4C30DCCB252991D9003166A5 /* ResponseParser */,
+				4C30DCC2252991C1003166A5 /* Model */,
 				4C30DC9225299193003166A5 /* Assets.xcassets */,
 				4C30DC9725299193003166A5 /* Info.plist */,
 				4C30DC9425299193003166A5 /* Preview Content */,
@@ -130,6 +163,96 @@
 			path = OCWiNewsViewerUITests;
 			sourceTree = "<group>";
 		};
+		4C30DCBC252991A6003166A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCBD252991B6003166A5 /* NewsListView.swift */,
+				4C30DD2625299A99003166A5 /* NewsRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C30DCC2252991C1003166A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCC3252991CF003166A5 /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C30DCCB252991D9003166A5 /* ResponseParser */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCDA2529924F003166A5 /* Object */,
+				4C30DCCC25299203003166A5 /* RSSParser.swift */,
+			);
+			path = ResponseParser;
+			sourceTree = "<group>";
+		};
+		4C30DCDA2529924F003166A5 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCDB2529925D003166A5 /* RSS.swift */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		4C30DCE32529928F003166A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCE4252992A1003166A5 /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4C30DCEC252992E4003166A5 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCED252992EC003166A5 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		4C30DCF5252993BE003166A5 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DCF6252993E2003166A5 /* CourseNewsConverter.swift */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		4C30DD012529940F003166A5 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DD0225299424003166A5 /* CourseNews.swift */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		4C30DD0A25299493003166A5 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DD0B252994A4003166A5 /* NewsTranslator.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		4C30DD13252994E6003166A5 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DD14252994F5003166A5 /* NewsMediaLinkDetector.swift */,
+			);
+			path = Detector;
+			sourceTree = "<group>";
+		};
+		4C30DD1C25299519003166A5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4C30DD1D2529953A003166A5 /* Regexp.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +269,9 @@
 			dependencies = (
 			);
 			name = OCWiNewsViewer;
+			packageProductDependencies = (
+				4C30DCD52529922C003166A5 /* Kanna */,
+			);
 			productName = OCWiNewsViewer;
 			productReference = 4C30DC8B25299192003166A5 /* OCWiNewsViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +343,9 @@
 				Base,
 			);
 			mainGroup = 4C30DC8225299192003166A5;
+			packageReferences = (
+				4C30DCD42529922C003166A5 /* XCRemoteSwiftPackageReference "Kanna" */,
+			);
 			productRefGroup = 4C30DC8C25299192003166A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +388,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C30DC9125299192003166A5 /* ContentView.swift in Sources */,
+				4C30DCBE252991B6003166A5 /* NewsListView.swift in Sources */,
+				4C30DD0C252994A4003166A5 /* NewsTranslator.swift in Sources */,
+				4C30DD15252994F5003166A5 /* NewsMediaLinkDetector.swift in Sources */,
+				4C30DCDC2529925D003166A5 /* RSS.swift in Sources */,
+				4C30DD2725299A99003166A5 /* NewsRow.swift in Sources */,
+				4C30DD1E2529953A003166A5 /* Regexp.swift in Sources */,
+				4C30DD0325299424003166A5 /* CourseNews.swift in Sources */,
+				4C30DCEE252992EC003166A5 /* APIClient.swift in Sources */,
+				4C30DCC4252991CF003166A5 /* News.swift in Sources */,
+				4C30DCF7252993E2003166A5 /* CourseNewsConverter.swift in Sources */,
+				4C30DCE5252992A1003166A5 /* NewsViewModel.swift in Sources */,
 				4C30DC8F25299192003166A5 /* OCWiNewsViewerApp.swift in Sources */,
+				4C30DCCD25299203003166A5 /* RSSParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +714,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C30DCD42529922C003166A5 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C30DCD52529922C003166A5 /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C30DCD42529922C003166A5 /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C30DC8325299192003166A5 /* Project object */;
 }
