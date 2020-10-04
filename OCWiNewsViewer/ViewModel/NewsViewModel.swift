@@ -22,7 +22,12 @@ class NewsViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { result in
-                    // TODO: エラーハンドリング
+                    switch result {
+                    case .finished:
+                        break
+                    case let .failure(error):
+                        print(error)
+                    }
                 },
                 receiveValue: { news in
                     self.news = news

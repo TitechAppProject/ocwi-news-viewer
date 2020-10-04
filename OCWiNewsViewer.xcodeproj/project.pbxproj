@@ -25,6 +25,7 @@
 		4C30DD15252994F5003166A5 /* NewsMediaLinkDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD14252994F5003166A5 /* NewsMediaLinkDetector.swift */; };
 		4C30DD1E2529953A003166A5 /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD1D2529953A003166A5 /* Regexp.swift */; };
 		4C30DD2725299A99003166A5 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD2625299A99003166A5 /* NewsRow.swift */; };
+		4C30DD3225299EA8003166A5 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C30DD3125299EA8003166A5 /* NewsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		4C30DD14252994F5003166A5 /* NewsMediaLinkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsMediaLinkDetector.swift; sourceTree = "<group>"; };
 		4C30DD1D2529953A003166A5 /* Regexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		4C30DD2625299A99003166A5 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
+		4C30DD3125299EA8003166A5 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				4C30DCBD252991B6003166A5 /* NewsListView.swift */,
 				4C30DD2625299A99003166A5 /* NewsRow.swift */,
+				4C30DD3125299EA8003166A5 /* NewsDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				4C30DCEE252992EC003166A5 /* APIClient.swift in Sources */,
 				4C30DCC4252991CF003166A5 /* News.swift in Sources */,
 				4C30DCF7252993E2003166A5 /* CourseNewsConverter.swift in Sources */,
+				4C30DD3225299EA8003166A5 /* NewsDetailView.swift in Sources */,
 				4C30DCE5252992A1003166A5 /* NewsViewModel.swift in Sources */,
 				4C30DC8F25299192003166A5 /* OCWiNewsViewerApp.swift in Sources */,
 				4C30DCCD25299203003166A5 /* RSSParser.swift in Sources */,

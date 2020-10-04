@@ -10,7 +10,7 @@ import SwiftUI
 struct NewsRow: View {
     let news: News
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             if let info = news.info {
                 Text("[\(info)] \(news.courseName)")
             } else {
@@ -20,18 +20,22 @@ struct NewsRow: View {
             if let date = news.date {
                 Text(dateText(date))
             }
-            if let firstMediaLink = news.mediaLinks.first {
-                switch firstMediaLink {
+            ForEach(news.mediaLinks) { mediaLink in
+                switch mediaLink {
                 case let .zoomLive(url, id, passcord):
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text(url.absoluteString)
                         Text(id ?? "未検出")
                         Text(passcord ?? "未検出")
                     }
                 case let .zoomRecord(url, password):
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text(url.absoluteString)
                         Text(password ?? "未検出")
+                    }
+                case let .youtube(url):
+                    VStack(alignment: .leading) {
+                        Text(url.absoluteString)
                     }
                 }
             }

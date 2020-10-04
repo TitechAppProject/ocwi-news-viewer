@@ -13,7 +13,12 @@ struct NewsListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.news) { news in
-                NewsRow(news: news)
+                NavigationLink(
+                    destination: NewsDetailView(news: news),
+                    label: {
+                        NewsRow(news: news)
+                    })
+               
             }
             .onAppear {
                 viewModel.appear()

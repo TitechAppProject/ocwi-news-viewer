@@ -19,10 +19,12 @@ struct CourseNews: Codable {
 enum MediaLink: Codable {
     case zoomLive(url: URL, id: String?, passcord: String?)
     case zoomRecord(url: URL, password: String?)
+    case youtube(url: URL)
 
     enum CodingKeys: CodingKey {
         case zoomLive
         case zoomRecord
+        case youtube
     }
 
     init(from decoder: Decoder) throws {
@@ -43,6 +45,10 @@ enum MediaLink: Codable {
             let url = try nestedContainer.decode(URL.self)
             let password = try nestedContainer.decode(String?.self)
             self = .zoomRecord(url: url, password: password)
+        case .youtube:
+            var nestedContainer = try container.nestedUnkeyedContainer(forKey: .youtube)
+            let url = try nestedContainer.decode(URL.self)
+            self = .youtube(url: url)
         }
     }
 
@@ -59,6 +65,9 @@ enum MediaLink: Codable {
             var nestedContainer = container.nestedUnkeyedContainer(forKey: .zoomRecord)
             try nestedContainer.encode(url)
             try nestedContainer.encode(password)
+        case let .youtube(url):
+            var nestedContainer = container.nestedUnkeyedContainer(forKey: .youtube)
+            try nestedContainer.encode(url)
         }
     }
 }

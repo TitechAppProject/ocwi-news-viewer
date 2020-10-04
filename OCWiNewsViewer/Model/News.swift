@@ -15,3 +15,9 @@ struct News: Identifiable {
     let mediaLinks: [MediaLink]
     let date: Date?
 }
+
+extension MediaLink: Identifiable {
+    var id: String {
+        UUID().uuidString
+    }
+}
